@@ -86,7 +86,7 @@ The PUT Asset by Code Method allows the ability to update various fields about t
 
 ### Example Response for GET Asset by Code Method from Our environment
 
-`{
+{
     "syscode": 7152,
     "code": "007556",
     "description": "Desk",
@@ -201,7 +201,7 @@ The PUT Asset by Code Method allows the ability to update various fields about t
     "createdBy": "MULESERVICE",
     "creationDate": 1600452645000,
     "modifiedOn": 1617265219000
-}`
+}
 
 ## Questions
 If you have any questions on this please reach out to Nathan Moore from Michigan State University @ nmoore@msu.edu.
