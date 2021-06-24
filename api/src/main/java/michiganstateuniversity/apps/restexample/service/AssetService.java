@@ -53,7 +53,7 @@ public class AssetService
         
         ArrayList<AssetDTO> assets = new ArrayList<AssetDTO>();
         if (syscode == null && assetCode == null && description == null && status == null && assetGroup == null && assetClass == null && manufacturer == null && model == null && assetTag == null && property == null && floor == null && space == null) {
-            IDatabaseQuery query = dataService.getPVDatabaseQuery("AssetDetailsQuery");
+            IDatabaseQuery query = dataService.getPVDatabaseQuery("AssetQuery");
             query.getSearchExpression("assetCode", Operator.NOT_NULL);   
 
             IResultSet resultset = query.execute();
@@ -67,7 +67,7 @@ public class AssetService
             }
         }
         if (syscode != null || assetCode != null || description != null || status != null || assetGroup != null || assetClass != null || manufacturer != null || model != null || assetTag != null || property != null || floor != null || space != null) {
-            IDatabaseQuery query = dataService.getPVDatabaseQuery("AssetDetailsQuery");
+            IDatabaseQuery query = dataService.getPVDatabaseQuery("AssetQuery");
             if (syscode != null) {query.getIntegerSearchExpression("syscode", Operator.EQUAL).addValue(syscode);}
             if (assetCode != null) {query.getStringSearchExpression("assetCode", Operator.CONTAINS).addValue(assetCode);}
             if (description != null) {query.getStringSearchExpression("description", Operator.CONTAINS).addValue(description);}
@@ -98,7 +98,7 @@ public class AssetService
     public AssetDTO getAssetByCode(final IDataService dataService, final String assetCode) throws BusinessException, FieldNotFoundException, IllegalStateException, ActionNotFoundException, IOException {
         System.out.println("AssetService: getAssetByCode "+assetCode);
         
-        IDatabaseQuery query = dataService.getPVDatabaseQuery("AssetDetailsQuery");
+        IDatabaseQuery query = dataService.getPVDatabaseQuery("AssetQuery");
         query.getSearchExpression("assetCode", Operator.EQUAL).addValue(assetCode);     
 
         IResultSet resultset = query.execute();
@@ -111,7 +111,7 @@ public class AssetService
     public AssetUpdateDTO getAssetUpdateByCode(final IDataService dataService, final String assetCode) throws BusinessException, FieldNotFoundException, IllegalStateException, ActionNotFoundException, IOException {
         System.out.println("AssetService: getAssetByCode "+assetCode);
         
-        IDatabaseQuery query = dataService.getPVDatabaseQuery("AssetDetailsQuery");
+        IDatabaseQuery query = dataService.getPVDatabaseQuery("AssetQuery");
         query.getSearchExpression("assetCode", Operator.EQUAL).addValue(assetCode);     
 
         IResultSet resultset = query.execute();
