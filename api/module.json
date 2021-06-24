@@ -1,0 +1,6 @@
+{
+  "type" : "server",
+  "description" : "",
+  "dependencies" : [ ],
+  "testDependencies" : [ ]
+}
