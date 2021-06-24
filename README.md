@@ -84,5 +84,124 @@ The PUT Asset by Code Method allows the ability to update various fields about t
 - In Service Date – Date-only – This should be provided in the form of EPOCH time in milliseconds like this example 1624541770000. 
 - Attributes – Attributes require an attribute code, attribute value and attribute type to be provided to properly update (these values can be found from a GET call for an asset or by making other REST endpoints to retrieve the values to choose from for attribute code and value)
 
+### Example Response for GET Asset by Code Method from Our environment
+
+`{
+    "syscode": 7152,
+    "code": "007556",
+    "description": "Desk",
+    "property": {
+        "syscode": 27667,
+        "propertyCode": "0008",
+        "commonName": "WILLS HOUSE",
+        "status": "PR01"
+    },
+    "floor": {
+        "syscode": 2730,
+        "floorCode": "01",
+        "name": "First Floor",
+        "propertyCode": "0008"
+    },
+    "space": {
+        "syscode": 63880,
+        "spaceNumber": "101",
+        "floorCode": "01"
+    },
+    "department": null,
+    "assetGroup": {
+        "syscode": 3559,
+        "code": "G1020.10",
+        "name": "Utility Demolition"
+    },
+    "assetClassification": {
+        "syscode": 9264,
+        "code": "11_31_13",
+        "description": "Playground Surfaces"
+    },
+    "assetTag": "Asset Tag 23",
+    "mainAsset": null,
+    "standardAsset": null,
+    "photo": null,
+    "status": {
+        "syscode": 1481,
+        "code": "AS20",
+        "name": "In Use"
+    },
+    "boType": "UsrAsset",
+    "brand": null,
+    "model": "base model",
+    "manufacturer": {
+        "syscode": 4,
+        "code": "0002",
+        "name": "Grainger"
+    },
+    "isMissing": false,
+    "inServiceDate": 1601784000000,
+    "quantity": null,
+    "attributeSet": {
+        "syscode": 84,
+        "code": "TEST",
+        "name": "Test"
+    },
+    "attributes": [
+        {
+            "code": "Amps",
+            "value": 100015.2,
+            "label": "Amps",
+            "attributeType": "BIGDECIMAL"
+        },
+        {
+            "code": "DateTime",
+            "value": 1601918640000,
+            "label": "Date Time",
+            "attributeType": "DATETIME"
+        },
+        {
+            "code": "GeneratorSize",
+            "value": "Size of the generator",
+            "label": "Generator Size",
+            "attributeType": "STRING"
+        },
+        {
+            "code": "NumberOfCircuits",
+            "value": 15,
+            "label": "# Of Circuits",
+            "attributeType": "INTEGER"
+        },
+        {
+            "code": "PadExpireDate",
+            "value": 1601870400000,
+            "label": "Pad Expiration Date",
+            "attributeType": "DATE"
+        },
+        {
+            "code": "Serves",
+            "value": "This serves a ton of stuff. This is multiline data! This serves a ton of stuff.",
+            "label": "Serves?",
+            "attributeType": "MULTILINE"
+        },
+        {
+            "code": "Time",
+            "value": "08:42:15",
+            "label": "Time test",
+            "attributeType": "TIME"
+        },
+        {
+            "code": "TypeOfGenerator",
+            "value": {
+                "label": "Combo",
+                "code": "Combo"
+            },
+            "label": "Type Of Generator",
+            "attributeType": "SINGLESELECT"
+        }
+    ],
+    "isSimple": true,
+    "isArchived": false,
+    "createdBy": "MULESERVICE",
+    "creationDate": 1600452645000,
+    "modifiedOn": 1617265219000
+}`
+
 ## Questions
 If you have any questions on this please reach out to Nathan Moore from Michigan State University @ nmoore@msu.edu.
